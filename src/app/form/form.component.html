@@ -1,0 +1,25 @@
+<section>
+
+    <form [formGroup]="loginForm">
+
+        <input type="email" id="email" formControlName="email">
+        <label for="email" id="label-email">E-mail</label>
+        <br>
+        <input type="password" id="password" formControlName="password">
+        <label for="password" id="label-password">Password</label>
+        <br>
+        <button (click)="submitForm(loginForm)" [disabled]="loginForm.invalid">Login</button>
+
+        <p><b>Dados</b></p>
+        <p>login: {{loginForm.get('email')?.value}}</p>
+        <p>password: {{loginForm.get('password')?.value}}</p>
+ 
+    </form>
+
+
+
+
+
+
+
+</section>
